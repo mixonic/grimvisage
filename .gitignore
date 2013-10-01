@@ -15,3 +15,5 @@
 /connect.lock
 /libpeerconnection.log
 .DS_Store
+**/.*.swp
+**/.*.un~
