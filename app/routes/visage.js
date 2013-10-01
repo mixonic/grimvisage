@@ -16,7 +16,6 @@ var VisageRoute = Ember.Route.extend({
     savePhoto: function(photo){
       var user = this.modelFor('visage');
       user.persist({ photo: photo });
-      this.transitionTo('visage.index', user);
     }
   }
 });
