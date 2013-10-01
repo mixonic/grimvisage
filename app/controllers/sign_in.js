@@ -2,12 +2,14 @@ var SignInController = Ember.Controller.extend({
   reset: function(){
     this.set('email', null);
     this.set('password', null);
+    this.set('rememberMe', true);
   }.on('init'),
   actions: {
     signIn: function(){
       var credentials = {
             email: this.get('email'),
-            password: this.get('password')
+            password: this.get('password'),
+            rememberMe: this.get('rememberMe')
           },
           controller = this;
       this.get('session').open(credentials)

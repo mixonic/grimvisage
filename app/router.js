@@ -5,13 +5,21 @@ Ember.Route.reopen({
     var session = this.get('session'),
         route   = this;
     return new Ember.RSVP.Promise(function(resolve, reject){
-      if (!route.get('isPublicRoute') && !session.get('isAuthenticated')){
-        session.fetch().then(resolve, function(){
-          session.set('afterRedirect', transition);
-          reject('unauthenticated');
-        });
-      } else {
+      if (session.get('isAuthenticated')) {
         resolve();
+      } else {
+        session.fetch()
+          .then(function(){
+            resolve();
+          }, function(){
+            if (route.get('isPublicRoute')) {
+              // Maybe we should not have checked at firebase again...
+              resolve();
+            } else {
+              session.set('afterRedirect', transition);
+              reject('unauthenticated');
+            }
+          });
       }
     });
   }
