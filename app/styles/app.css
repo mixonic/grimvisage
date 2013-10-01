@@ -1,0 +1,13 @@
+/* Put your CSS here */
+html, body {
+    margin: 20px;
+}
+
+@keyframes domChanged { from { background: yellow; } }
+@-webkit-keyframes domChanged { from { background: yellow; } }
+.ember-view { animation: domChanged 1s; -webkit-animation: domChanged 1s; }
+
+img, video {
+  width: 307px;
+  height: 250px;
+}

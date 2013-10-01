@@ -1,0 +1,11 @@
+<h2>Grim-visaged</h2>
+
+<p>
+  {{#if session.isAuthenticated}}
+    <a href="#" {{action "signOut"}}>Sign Out</a>
+  {{else}}
+    {{#link-to "index"}}Sign In/Up{{/link-to}}
+  {{/if}}
+</p>
+
+{{outlet}}
