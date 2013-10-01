@@ -4,7 +4,7 @@ and war that hath smooth'd his wrinkled front.
 
 Also the domain was available.
 
-![](http://f.cl.ly/items/12082r0j3b1j2a0O2k38/Screen%20Shot%202013-09-30%20at%2010.33.31%20PM.png)
+![](https://api.monosnap.com/image/download?id=0buBCKo78Au6L8U1Wu8Dh9VDn)
 
 Once you are running grimvisage, you can take a webcam photo of yourself
 and share it from your profile's URL. You can also see other peoples
