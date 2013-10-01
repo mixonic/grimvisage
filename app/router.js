@@ -5,9 +5,7 @@ Ember.Route.reopen({
     var session = this.get('session'),
         route   = this;
     return new Ember.RSVP.Promise(function(resolve, reject){
-
       if (!route.get('isPublicRoute') && !session.get('isAuthenticated')){
-
         session.fetch().then(resolve, function(){
           session.set('afterRedirect', transition);
           reject('unauthenticated');

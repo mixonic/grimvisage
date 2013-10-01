@@ -4,7 +4,7 @@ var VisageEditRoute = Ember.Route.extend({
         userId = model.get('id'),
         currentUserId = this.get('session.currentUser.id');
     if (userId !== currentUserId){
-      this.transitionTo('visage', model);
+      this.transitionTo('visage.index', model);
     }
   }
 });

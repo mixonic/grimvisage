@@ -13,7 +13,7 @@ var SignInController = Ember.Controller.extend({
       this.get('session').open(credentials)
         .then(function(user){
           controller.reset();
-          controller.transitionToRoute('visage', user);
+          controller.transitionToRoute('visage.index', user);
         }, function(error){
           controller.set('notice', 'There was an error with your username or password');
         });

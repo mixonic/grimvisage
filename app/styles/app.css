@@ -10,4 +10,5 @@ html, body {
 img, video {
   width: 307px;
   height: 250px;
+  border: 1px solid #333;
 }
